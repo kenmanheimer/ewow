@@ -10,6 +10,26 @@
 ;; 2020-02-13 klm: Exempt emacs sent to vcxsrv. (Similar to but different from setting in fundamental.ahk.)
 ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
+#If !dummy && !ignored_frame() && !cx
+
+^!b:: backward_char()
+^!f:: forward_char()
+^+b:: backward_word()
+^+f:: forward_word()
+
+^+d:: delete_char()
+
+^+e:: move_end_of_line()
+^+a:: move_beginning_of_line()
+^+n:: next_line()
+^+p:: previous_line()
+
+^space:: set_mark_command()
+^g:: keyboard_quit()
+
+^+v:: scroll_up()
+^!v:: scroll_down()
+
 ;; evil_auto_mode = 1
 
 ;; //////////// auto execution section ends here ////////////
