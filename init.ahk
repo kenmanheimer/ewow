@@ -7,6 +7,9 @@
 ;; customize variables
 ;; -------------------
 
+;; 2020-02-13 klm: Exempt emacs sent to vcxsrv. (Similar to but different from setting in fundamental.ahk.)
+ignored_frames = vcxsrv/x X rl
+
 ;; evil_auto_mode = 1
 
 ;; //////////// auto execution section ends here ////////////
