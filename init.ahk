@@ -8,7 +8,7 @@
 ;; -------------------
 
 ;; 2020-02-13 klm: Exempt emacs sent to vcxsrv. (Similar to but different from setting in fundamental.ahk.)
-ignored_frames = vcxsrv/x X rl
+ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
 ;; evil_auto_mode = 1
 
