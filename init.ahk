@@ -25,10 +25,32 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 ^+p:: previous_line()
 
 ^space:: set_mark_command()
-^g:: keyboard_quit()
 
-^+v:: scroll_up()
-^!v:: scroll_down()
+^!v:: scroll_up()
+^+v:: scroll_down()
+
++^x:: set_cx_command()
+
+#If !dummy && !ignored_frame() && cx
+x:: ignore()
+g:: keyboard_quit()
+h:: mark_whole_buffer()
+l:: goto_line()                 ; (prompt if no prefix)
+o:: next_window()               ; other-window
++o:: previous_window()        ; previous-buffer
+q:: query_replace()          ; query-replace-regexp
+<:: beginning_of_buffer()
+>:: end_of_buffer()
+
+;;(:: kmacro_start_macro()
+;;):: kmacro_end_macro()
+;;e:: kmacro_end_or_call_macro()
+
+
+#If !dummy && !ignored_frame() && !cx
+
+
+;;;;;;;;;;;;;;;;
 
 ;; evil_auto_mode = 1
 
