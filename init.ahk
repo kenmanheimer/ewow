@@ -1,14 +1,31 @@
+;; Ewow repository: https://github.com/kenmanheimer/ewow (and from there find main one)
+;; Autohotkey docs: https://www.autohotkey.com/docs/
+
 ;; load libraries
 ;; --------------
 
-;; #Include lib_evil.ahk
 ;; #Include lib_autopair.ahk
 
 ;; customize variables
 ;; -------------------
 
-;; 2020-02-13 klm: Exempt emacs sent to vcxsrv. (Similar to but different from setting in fundamental.ahk.)
 ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
+
+#If !dummy && cx
+
+#If !dummy
+^#e:: WinActivate, emacs@
+^#u:: WinActivate, Ubuntu
+^#i:: WinActivate, iTunes
+^#c:: WinActivate, ahk_exe chrome.exe
+^#t:: MsgBox, 0, Yop, Hello, 1
+
+^+#r::
+MsgBox, 0, Reloading..., Reloading., .5
+;;Progress, 100, fluff, Reloading
+;;Sleep, 500
+Reload
+return
 
 #If !dummy && !ignored_frame() && !cx
 
