@@ -13,14 +13,15 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
 #If !dummy && cx
 
-#If !dummy
+#If !dummy                      ;; Everywhere:
+
 ^#e:: WinActivate, emacs@
-^#u:: WinActivate, Ubuntu
+^#n:: WinActivate, ahk_exe notion.exe
+^#t:: WinActivate, ahk_exe WindowsTerminal.exe
 ^#i:: WinActivate, iTunes
 ^#c:: WinActivate, ahk_exe chrome.exe
-^#t:: MsgBox, 0, Yop, Hello, 1
 
-^+#r::
+^+#r::                          ;; Reload:
 MsgBox, 0, Reloading..., Reloading., .5
 ;;Progress, 100, fluff, Reloading
 ;;Sleep, 500
