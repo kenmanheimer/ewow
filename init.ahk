@@ -13,17 +13,22 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
 #If !dummy                                           ;; Everywhere:
 
-^#e:: WinActivate, emacs@
-^#n:: WinActivate, ahk_exe notion.exe
-^#t:: WinActivate, ahk_exe WindowsTerminal.exe
-^#i:: WinActivate, iTunes
 ^#c:: WinActivate, ahk_exe chrome.exe
+^#e:: WinActivate, emacs@
+^#i:: WinActivate, iTunes
+^#f:: WinActivate, ahk_class CabinetWClass   ;; Explorer (.. Explorer.exe goes to task bar)
+^#n:: WinActivate, ahk_exe notion.exe
+^#s:: WinActivate, Skype
+^#t:: WinActivate, ahk_exe WindowsTerminal.exe
 
 ^+#r::                          ;; Reload:
 MsgBox, 0, Reloading..., Reloading., .5
 ;;Progress, 100, fluff, Reloading
 ;;Sleep, 500
 Reload
+return
+^+#s::
+run, C:\ProgramData\Microsoft\Windows\Start Menu\Programs\AutoHotkey\Window Spy.lnk
 return
 
 #Include cycle.ahk
