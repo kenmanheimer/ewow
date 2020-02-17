@@ -11,9 +11,7 @@
 
 ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
-#If !dummy && cx
-
-#If !dummy                      ;; Everywhere:
+#If !dummy                                           ;; Everywhere:
 
 ^#e:: WinActivate, emacs@
 ^#n:: WinActivate, ahk_exe notion.exe
@@ -28,28 +26,41 @@ MsgBox, 0, Reloading..., Reloading., .5
 Reload
 return
 
-#If !dummy && !ignored_frame() && !cx
+#If !dummy && !ignored_frame() && !cx                ;; Regular
 
-^!b:: backward_char()
-^!f:: forward_char()
-^+b:: backward_word()
-^+f:: forward_word()
+^b:: backward_char()
+^!b:: backward_word()
++^b:: Send, ^b
+^f:: forward_char()
+^!f:: forward_word()
++^f:: Send, ^f
 
-^+d:: delete_char()
+^d:: delete_char()
++^d:: Send, ^d
+^k:: kill_line()
++^k:: Send, ^k
 
-^+e:: move_end_of_line()
-^+a:: move_beginning_of_line()
-^+n:: next_line()
-^+p:: previous_line()
+^e:: move_end_of_line()
++^e:: Send, ^e
+^a:: move_beginning_of_line()
++^a:: Send, ^a
+^n:: next_line()
+^+n:: Send, ^n
+!^+n:: Send, +^n
+^p:: previous_line()
+^+p:: Send, ^p
 
 ^space:: set_mark_command()
+^g:: keyboard_quit()
++^g:: Send, ^g
 
 ^!v:: scroll_up()
 ^+v:: scroll_down()
 
 +^x:: set_cx_command()
 
-#If !dummy && !ignored_frame() && cx
+#If !dummy && !ignored_frame() && cx                 ;; Ctrl-x
+
 x:: ignore()
 g:: keyboard_quit()
 h:: mark_whole_buffer()
