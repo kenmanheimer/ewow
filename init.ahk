@@ -32,7 +32,7 @@ return
 
 ^b:: backward_char()
 +^b:: backward_word()
-+!^b:: Send, ^b
++!^b:: Send, ^b                 ;; (Also see +^X^b, for Notion.)
 ^f:: forward_char()
 +^f:: forward_word()
 +!^f:: Send, ^f
@@ -75,6 +75,8 @@ o:: next_window()               ; other-window
 q:: query_replace()          ; query-replace-regexp
 <:: beginning_of_buffer()
 >:: end_of_buffer()
+
+^b:: Send, ^b
 
 ;;(:: kmacro_start_macro()
 ;;):: kmacro_end_macro()
