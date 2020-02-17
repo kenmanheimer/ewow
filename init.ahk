@@ -29,26 +29,29 @@ return
 #If !dummy && !ignored_frame() && !cx                ;; Regular
 
 ^b:: backward_char()
-^!b:: backward_word()
-+^b:: Send, ^b
++^b:: backward_word()
++!^b:: Send, ^b
 ^f:: forward_char()
-^!f:: forward_word()
-+^f:: Send, ^f
++^f:: forward_word()
++!^f:: Send, ^f
 
 ^d:: delete_char()
 +^d:: Send, ^d
 ^k:: kill_line()
 +^k:: Send, ^k
++!^k:: Send, +^k
 
 ^e:: move_end_of_line()
 +^e:: Send, ^e
 ^a:: move_beginning_of_line()
 +^a:: Send, ^a
++!^a:: Send, +^a
 ^n:: next_line()
 ^+n:: Send, ^n
 !^+n:: Send, +^n
 ^p:: previous_line()
 ^+p:: Send, ^p
+^!+p:: Send, +^p
 
 ^space:: set_mark_command()
 ^g:: keyboard_quit()
