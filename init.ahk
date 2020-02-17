@@ -26,6 +26,8 @@ MsgBox, 0, Reloading..., Reloading., .5
 Reload
 return
 
+#Include cycle.ahk
+
 #If !dummy && !ignored_frame() && !cx                ;; Regular
 
 ^b:: backward_char()
