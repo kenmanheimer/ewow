@@ -5,13 +5,13 @@
 
 #If !dummy
 
-#`:: ; Next window
+#-:: ; Next window
 WinGetClass, ActiveClass, A
 WinSet, Bottom,, A
 WinActivate, ahk_class %ActiveClass%
 return
 
-+#`:: ; Previous window
++#-:: ; Previous window
 WinGetClass, ActiveClass, A
 WinActivateBottom, ahk_class %ActiveClass%
 return
