@@ -1,15 +1,15 @@
 ;; Ewow repository: https://github.com/kenmanheimer/ewow (and from there find main one)
 ;; Autohotkey docs: https://www.autohotkey.com/docs/
 
+ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
+
 ;; load libraries
 ;; --------------
 
-;; #Include lib_autopair.ahk
+#Include altchars.ahk
 
 ;; customize variables
 ;; -------------------
-
-ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
 #If !dummy                                           ;; Everywhere:
 
