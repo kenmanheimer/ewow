@@ -23,9 +23,9 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
 ^+#r::                          ;; Reload:
 MsgBox, 0, Reloading..., Reloading., .5
+Reload
 ;;Progress, 100, fluff, Reloading
 ;;Sleep, 500
-Reload
 return
 ^+#s::
 run, C:\ProgramData\Microsoft\Windows\Start Menu\Programs\AutoHotkey\Window Spy.lnk
