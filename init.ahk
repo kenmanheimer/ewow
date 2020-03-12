@@ -64,8 +64,9 @@ return
 ^g:: keyboard_quit()
 +^g:: Send, ^g
 
-^!v:: scroll_up()
-^+v:: scroll_down()
+;; I don't use these much, there are good alternatives, and ^!v is valuable as is (paste verbatim.)
+;;^!v:: scroll_up()
+;;^+v:: scroll_down()
 
 +^x:: set_cx_command()
 
