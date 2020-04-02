@@ -41,6 +41,7 @@ return
 ^f:: forward_char()
 +^f:: forward_word()
 +!^f:: Send, ^f
++^s:: Send, ^f                  ;; For Notion windows, where !meta+^ctl doesn't work
 
 ^d:: delete_char()
 +^d:: Send, ^d
