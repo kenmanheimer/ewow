@@ -17,14 +17,14 @@
 ; https://autohotkey.com/docs/Hotkeys.htm
 ; https://autohotkey.com/docs/Hotstrings.htm
 
-
 #If GetKeyState("CapsLock","T") && !dummy && !ignored_frame() && !cx
 
 {
         -:: Send {U+2013} ; en-dash
         +-:: Send {U+2014} ; em-dash
-        !e::Send {U+00E9} ; e-acute
-        +!e:: Send {U+00E8} ; e-grave
+        !e:: Send {U+00EB} ; e-umlaut
+        +!e::Send {U+00E9} ; e-acute
+        +!^e:: Send {U+00E8} ; e-grave
 
 	a::Send {U+03B1} ; α alpha
 	+a::Send {U+0391} ; Α Alpha
