@@ -17,10 +17,20 @@
 ; https://autohotkey.com/docs/Hotkeys.htm
 ; https://autohotkey.com/docs/Hotstrings.htm
 
+;; Use en-dash everwhere, and below send regular dash under caps-lock.
+;; (I tend to use the dash that separates distinct ideas more than the word-compounding dash,
+;;  and I use the endash instead of the drastically long emdash to separate grammatic fragments.
+;;  Others do too, according to https://www.punctuationmatters.com/hyphen-dash-n-dash-and-m-dash/
+;;  "Break the rules!" section...)
+#If !ignored_frame() && !GetKeyState("CapsLock","T") && !cx
+{
+    -:: Send {U+2013} ; en-dash
+}
+
 #If GetKeyState("CapsLock","T") && !dummy && !ignored_frame() && !cx
 
 {
-        -:: Send {U+2013} ; en-dash
+        -:: Send {-} ; regular dash
         +-:: Send {U+2014} ; em-dash
         !e:: Send {U+00EB} ; e-umlaut
         +!e::Send {U+00E9} ; e-acute
