@@ -73,8 +73,11 @@ return
 
 #If !dummy && !ignored_frame() && cx                 ;; Ctrl-x
 
-x:: ignore()
+x:: ignore()                    ; Cancel ctrl-x
 g:: keyboard_quit()
+
+-:: command_simple("{U+2013}", 1, 1)     ; en-dash
++-:: command_simple("{U+2014}", 1, 1)    ; em-dash
 h:: mark_whole_buffer()
 l:: goto_line()                 ; (prompt if no prefix)
 o:: next_window()               ; other-window
