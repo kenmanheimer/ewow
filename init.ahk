@@ -13,6 +13,8 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
 #If !dummy                                           ;; Everywhere:
 
+RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
+
 ^#c:: WinActivate, ahk_exe chrome.exe
 ^#e:: WinActivate, emacs@
 ^#i:: WinActivate, iTunes
