@@ -15,13 +15,13 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass
 
 RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
 
-^#c:: WinActivate, ahk_exe chrome.exe
-^#e:: WinActivate, emacs@
-^#i:: WinActivate, iTunes
-^#f:: WinActivate, ahk_class CabinetWClass   ;; Explorer (.. Explorer.exe goes to task bar)
-^#n:: WinActivate, ahk_exe notion.exe
-^#s:: WinActivate, Skype
-^#t:: WinActivate, ahk_exe WindowsTerminal.exe
++^#c:: WinActivate, ahk_exe chrome.exe
++^#e:: WinActivate, emacs@
++^#i:: WinActivate, iTunes
++^#f:: WinActivate, ahk_class CabinetWClass   ;; Explorer (.. Explorer.exe goes to task bar)
++^#n:: WinActivate, ahk_exe notion.exe
++^#s:: WinActivate, Skype
++^#t:: WinActivate, ahk_exe WindowsTerminal.exe
 
 ^+#r::                          ;; Reload:
 MsgBox, 0, Reloading..., Reloading., .5
@@ -29,7 +29,7 @@ Reload
 ;;Progress, 100, fluff, Reloading
 ;;Sleep, 500
 return
-^+#s::
+^#s::
 run, C:\ProgramData\Microsoft\Windows\Start Menu\Programs\AutoHotkey\Window Spy.lnk
 return
 
