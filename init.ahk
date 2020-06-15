@@ -40,33 +40,33 @@ return
 
 ^b:: backward_char()
 +^b:: backward_word()
-+!^b:: Send, ^b                 ;; (Also see +^X^b, for Notion.)
++!^b:: send("^b")                 ;; (Also see +^X^b below, for Notion.)
 ^f:: forward_char()
 +^f:: forward_word()
-+!^f:: Send, ^f
-+^s:: Send, ^f                  ;; For Notion windows, where !meta+^ctl doesn't work
++!^f:: send("^f")
++^s:: send("^f")                  ;; For Notion windows, where !meta + ^ctl doesn't work
 
 ^d:: delete_char()
-+^d:: Send, ^d
++^d:: send("^d")
 ^k:: kill_line()
-+^k:: Send, ^k
-+!^k:: Send, +^k
++^k:: send("^k")
++!^k:: send("+^k")
 
 ^e:: move_end_of_line()
-+^e:: Send, ^e
++^e:: send("^e")
 ^a:: move_beginning_of_line()
-+^a:: Send, ^a
-+!^a:: Send, +^a
++^a:: send("^a")
++!^a:: send("+^a")
 ^n:: next_line()
-^+n:: Send, ^n
-!^+n:: Send, +^n
+^+n:: send("^n")
+!^+n:: send("+^n")
 ^p:: previous_line()
-^+p:: Send, ^p
-^!+p:: Send, +^p
+^+p:: send("^p")
+^!+p:: send("+^p")
 
 ^space:: set_mark_command()
 ^g:: keyboard_quit()
-+^g:: Send, ^g
++^g:: send("^g")
 
 ;; I don't use these much, there are good alternatives, and ^!v is valuable as is (paste verbatim.)
 ;;^!v:: scroll_up()
