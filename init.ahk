@@ -76,8 +76,7 @@ return
 
 #If !dummy && !ignored_frame() && cx                 ;; Ctrl-x
 
-x:: ignore()                    ; Cancel ctrl-x
-g:: keyboard_quit()
+^g:: reset_cx()               ; Cancel ctrl-x
 
 -:: command_simple("{U+2013}", 1, 1)     ; en-dash
 +-:: command_simple("{U+2014}", 1, 1)    ; em-dash
