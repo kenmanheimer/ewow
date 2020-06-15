@@ -88,7 +88,8 @@ q:: query_replace()          ; query-replace-regexp
 <:: beginning_of_buffer()
 >:: end_of_buffer()
 
-^b:: Send, ^b
+^b::                         ; Another way to send ctrl-b, eg particularly in Notion:
+command_simple("^b", 0, 1)   ; "changes" is 0 for consistency with effect of eg ^i.
 
 ;;(:: kmacro_start_macro()
 ;;):: kmacro_end_macro()
