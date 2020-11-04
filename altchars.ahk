@@ -17,13 +17,91 @@
 ; https://autohotkey.com/docs/Hotkeys.htm
 ; https://autohotkey.com/docs/Hotstrings.htm
 
+#If !dummy && !ignored_frame() && accent = "`"
+;; grave:
+{
+    a::send_accented("{U+00E0}")
+    +a::send_accented("{U+00C0}")
+    e::send_accented("{U+00E8}")
+    +e::send_accented("{U+00C8}")
+    i::send_accented("{U+00EC}")
+    +i::send_accented("{U+00CC}")
+    o::send_accented("{U+00F2}")
+    +o::send_accented("{U+00D2}")
+    u::send_accented("{U+00F9}")
+    +u::send_accented("{U+00D9}")
+}
+
+#If !dummy && !ignored_frame() && accent = "'"
+;; acute:
+{
+    a::send_accented("{U+00E1}")
+    +a::send_accented("{U+00C1}")
+    e::send_accented("{U+00E9}")
+    +e::send_accented("{U+00C9}")
+    i::send_accented("{U+00ED}")
+    +i::send_accented("{U+00CD}")
+    o::send_accented("{U+00F3}")
+    +o::send_accented("{U+00D3}")
+    u::send_accented("{U+00FA}")
+    +u::send_accented("{U+00DA}")
+    y::send_accented("{U+00FD}")
+    +y::send_accented("{U+00DD}")
+}
+
+#If !dummy && !ignored_frame() && accent = "^"
+;; circumflex
+{
+    a::send_accented("{U+00E2}")
+    +a::send_accented("{U+00C2}")
+    e::send_accented("{U+00EA}")
+    +e::send_accented("{U+00CA}")
+    i::send_accented("{U+00EE}")
+    +i::send_accented("{U+00CE}")
+    o::send_accented("{U+00F4}")
+    +o::send_accented("{U+00D4}")
+    u::send_accented("{U+00FB}")
+    +u::send_accented("{U+00DB}")
+}
+
+#If !dummy && !ignored_frame() && accent = "~"
+;; tilde
+{
+    a::send_accented("{U+00E3}")
+    +a::send_accented("{U+00C3}")
+    ; no e-tilde, i-tilde
+    o::send_accented("{U+00F5}")
+    +o::send_accented("{U+00D5}")
+    ; no u-tilde
+}
+
+#If !dummy && !ignored_frame() && accent = ":"
+;; umlaut
+{
+    a::send_accented("{U+00E4}")
+    +a::send_accented("{U+00C4}")
+    e::send_accented("{U+00EB}")
+    +e::send_accented("{U+00CB}")
+    i::send_accented("{U+00EF}")
+    +i::send_accented("{U+00CF}")
+    o::send_accented("{U+00F6}")
+    +o::send_accented("{U+00D6}")
+    u::send_accented("{U+00FC}")
+    +u::send_accented("{U+00DC}")
+    y::send_accented("{U+00FF}")
+    +y::send_accented("{U+009F}")
+}
+
+#If !dummy && !ignored_frame() && accent = ","
+;; cedilla
+{
+    c::send_accented("{U+00E7}") ; e-umlaut
+    +c::send_accented("{U+00C7}") ; e-umlaut
+}
+
 #If GetKeyState("CapsLock","T") && !dummy && !ignored_frame() && !cx
 
 {
-        !e:: Send {U+00EB} ; e-umlaut
-        +!e::Send {U+00E9} ; e-acute
-        +!^e:: Send {U+00E8} ; e-grave
-
 	a::Send {U+03B1} ; α alpha
 	+a::Send {U+0391} ; Α Alpha
 	b::Send {U+03B2} ; β beta

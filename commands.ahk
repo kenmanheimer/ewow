@@ -145,6 +145,19 @@ set_cx_command()
     run_hooks("post_command_hook")
 }
 
+set_accent_modifier(the_accent)
+{ Global
+    run_hooks("pre_command_hook")
+    set_digit_argument(arg)
+    set_accent(the_accent)
+    run_hooks("post_command_hook")
+}
+send_accented(what)
+{ Global
+      Send %what%
+      reset_accent()
+}
+
 ;; send ESC and reset variables
 keyboard_quit()
 { Global

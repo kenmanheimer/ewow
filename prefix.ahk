@@ -51,6 +51,27 @@ set_cx()
 reset_cx()
 { Global
     cx := 0
+    reset_accent()
+    ToolTip, , , , %prefix_tt%
+}
+
+add_hook("pre_command_hook", "reset_cx")
+
+;; ----------
+;; prefix accents - C-x <accent char>
+;; ----------
+
+accent = 0
+
+set_accent(the_accent)
+{ Global
+    accent := the_accent
+    ToolTip, Accenting %accent%, 1, 0, %prefix_tt%
+}
+
+reset_accent()
+{ Global
+    accent := 0
     ToolTip, , , , %prefix_tt%
 }
 

@@ -78,8 +78,15 @@ return
 
 ^g:: reset_cx()               ; Cancel ctrl-x
 
+':: set_accent_modifier("'")       ; single quote = acute
+`:: set_accent_modifier("`")       ; backquote = grave
++`;:: set_accent_modifier(":")       ; pipe = umlaut (would prefer ":")
+^:: set_accent_modifier("^")       ; hat = circumflex
+~:: set_accent_modifier("~")       ; tilde
+,:: set_accent_modifier(",")       ; comma = cedilla
 -:: command_simple("{U+2013}", 1, 1)     ; en-dash
 +-:: command_simple("{U+2014}", 1, 1)    ; em-dash
+
 h:: mark_whole_buffer()
 l:: goto_line()                 ; (prompt if no prefix)
 o:: next_window()               ; other-window
