@@ -15,13 +15,17 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPC
 
 RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
 
-+^#c:: WinActivate, ahk_exe chrome.exe
-+^#e:: WinActivate, emacs@
+;; See https://www.autohotkey.com/docs/misc/WinTitle.htm and WinActivate.htm
+
++^#c:: WinActivateBottom, ahk_exe chrome.exe
 +^#i:: WinActivate, iTunes
-+^#f:: WinActivate, ahk_class CabinetWClass   ;; Explorer (.. Explorer.exe goes to task bar)
-+^#n:: WinActivate, ahk_exe notion.exe
+  ;; Explorer (.. Explorer.exe goes to task bar)
++^#f:: WinActivateBottom, ahk_class CabinetWClass
++^#n:: WinActivateBottom, ahk_exe notion.exe
 +^#s:: WinActivate, Skype
-+^#t:: WinActivate, ahk_exe WindowsTerminal.exe
++^#t:: WinActivateBottom, ahk_exe WindowsTerminal.exe
+  ;; Alternate between all X clients:
++^#x:: WinActivateBottom, ahk_exe vcxsrv.exe
 +^#z:: WinActivate, ahk_class ZPContentViewWndClass  ;; Zoom view window
 
 ^+#r::                          ;; Reload:
