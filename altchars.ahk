@@ -110,8 +110,8 @@
 	+c::Send {U+0393} ; Γ Gamma
 	d::Send {U+03B4} ; δ delta
 	+d::Send {U+0394} ; Δ Delta
-	e::Send {U+03B5} ; ε epislon
-	+e::Send {U+0395} ; Ε Epislon
+	e::Send {U+03B5} ; ε epsilon
+	+e::Send {U+0395} ; Ε Epsilon
 	z::Send {U+03B6} ; ζ zeta
 	+z::Send {U+0396} ; Ζ Zeta
 	h::Send {U+03B7} ; η eta
