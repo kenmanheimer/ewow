@@ -1,7 +1,7 @@
 ;; Ewow repository: https://github.com/kenmanheimer/ewow (and from there find main one)
 ;; Autohotkey docs: https://www.autohotkey.com/docs/
 
-ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPContentViewWndClass
+ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPContentViewWndClass,RAIL_WINDOW
 
 ;; load libraries
 ;; --------------
@@ -25,7 +25,7 @@ RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
 +^#s:: WinActivate, Skype
 +^#t:: WinActivateBottom, ahk_exe WindowsTerminal.exe
   ;; Alternate between all X clients:
-+^#x:: WinActivateBottom, ahk_exe vcxsrv.exe
++^#x:: WinActivateBottom, ahk_class RAIL_WINDOW
 +^#z:: WinActivate, ahk_class ZPContentViewWndClass  ;; Zoom view window
 
 ^+#r::                          ;; Reload:
