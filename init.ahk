@@ -90,6 +90,7 @@ return
 ,:: set_accent_modifier(",")       ; comma = cedilla
 -:: command_simple("{U+2013}", 1, 1)     ; en-dash
 +-:: command_simple("{U+2014}", 1, 1)    ; em-dash
+0:: command_simple("{U+00B0}", 1, 1)    ; degree
 
 h:: mark_whole_buffer()
 l:: goto_line()                 ; (prompt if no prefix)
