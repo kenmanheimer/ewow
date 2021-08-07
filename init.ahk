@@ -22,6 +22,7 @@ RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
   ;; Explorer (.. Explorer.exe goes to task bar)
 +^#f:: WinActivateBottom, ahk_class CabinetWClass
 +^#n:: WinActivateBottom, ahk_exe notion.exe
++^#p:: WinActivateBottom, ahk_exe notepad++.exe
 +^#s:: WinActivate, Skype
 +^#t:: WinActivateBottom, ahk_exe WindowsTerminal.exe
   ;; Alternate between all X clients:
