@@ -99,6 +99,30 @@
     +c::send_accented("{U+00C7}") ; e-umlaut
 }
 
+;; Ought to use implement mechanism to use U+2044 FRACTION SLASH instead, but for now:
+
+#If !dummy && !ignored_frame() && accent = "1"
+;; numerator = 1
+{
+    2::send_accented("{U+00BD}") ; 1/2
+    3::send_accented("{U+2153}") ; 1/3
+    4::send_accented("{U+00BC}") ; 1/4
+    5::send_accented("{U+2155}") ; 1/5
+}
+#If !dummy && !ignored_frame() && accent = "2"
+;; numerator = 1
+{
+    3::send_accented("{U+2154}") ; 2/3
+    5::send_accented("{U+2156}") ; 2/5
+}
+
+#If !dummy && !ignored_frame() && accent = "3"
+;; numerator = 1
+{
+    4::send_accented("{U+00BE}") ; 3/4
+    5::send_accented("{U+2157}") ; 3/5
+}
+
 #If GetKeyState("CapsLock","T") && !dummy && !ignored_frame() && !cx
 
 {

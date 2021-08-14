@@ -93,6 +93,11 @@ return
 +-:: command_simple("{U+2014}", 1, 1)    ; em-dash
 0:: command_simple("{U+00B0}", 1, 1)    ; degree
 
+;; Ought to implement mechanism to use U+2044 FRACTION SLASH instead, but for now:
+1:: set_accent_modifier("1")       ; numerator = 1
+2:: set_accent_modifier("2")       ; numerator = 2
+3:: set_accent_modifier("3")       ; numerator = 3
+
 h:: mark_whole_buffer()
 l:: goto_line()                 ; (prompt if no prefix)
 o:: next_window()               ; other-window
