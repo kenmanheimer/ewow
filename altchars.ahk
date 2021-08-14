@@ -99,7 +99,7 @@
     +c::send_accented("{U+00C7}") ; e-umlaut
 }
 
-;; Ought to use implement mechanism to use U+2044 FRACTION SLASH instead, but for now:
+;; Vulgar fractions for contexts where FRACTION SLASH doesn't work.
 
 #If !dummy && !ignored_frame() && accent = "1"
 ;; numerator = 1
