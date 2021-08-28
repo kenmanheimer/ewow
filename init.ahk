@@ -1,7 +1,9 @@
 ;; Ewow repository: https://github.com/kenmanheimer/ewow (and from there find main one)
 ;; Autohotkey docs: https://www.autohotkey.com/docs/
 
-ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPContentViewWndClass,RAIL_WINDOW
+;; RAIL_WINDOW class: X frames under WSLg
+;; CASCADIA_HOSTING_WINDOW_CLASS: WindowsTerminal
+ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPContentViewWndClass,RAIL_WINDOW,CASCADIA_HOSTING_WINDOW_CLASS
 
 ;; load libraries
 ;; --------------
