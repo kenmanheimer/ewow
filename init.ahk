@@ -20,6 +20,7 @@ RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
 ;; See https://www.autohotkey.com/docs/misc/WinTitle.htm and WinActivate.htm
 
 +^#c:: WinActivateBottom, ahk_exe chrome.exe
++^#e:: WinActivateBottom, ahk_exe msedge.exe
 +^#i:: WinActivate, iTunes
   ;; Explorer (.. Explorer.exe goes to task bar)
 +^#f:: WinActivateBottom, ahk_class CabinetWClass
