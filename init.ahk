@@ -98,6 +98,7 @@ return
 0:: command_simple("{U+00B0}", 1, 1)    ; degree
 c:: command_simple("{U+00A2}", 1, 1)    ; cents
 $:: command_simple("{U+20AC}", 1, 1)    ; Euro
+\:: command_simple("{U+2713}", 1, 1)    ; checkmark
 
 ;; ;; FRACTION SLASH makes all fractions but the fractions are expanded in many contexts.
 /:: send_accented("{U+2044}")       ; FRACTION SLASH - use between numerator and denomintor
