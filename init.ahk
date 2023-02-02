@@ -81,6 +81,8 @@ return
 
 +^x:: set_cx_command()
 
+;;;;;;;;;;;;;;;;;;;;; CTRL-X ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 #If !dummy && !ignored_frame() && cx                 ;; Ctrl-x
 
 ^g:: reset_cx()               ; Cancel ctrl-x
