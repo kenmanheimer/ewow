@@ -27,6 +27,7 @@ RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
 +^#p:: WinActivateBottom, ahk_exe notepad++.exe
 +^#s:: WinActivate, Skype
 +^#t:: WinActivateBottom, ahk_exe WindowsTerminal.exe
++^#u:: WinActivateBottom, ahk_class PuTTY
   ;; Alternate between all X clients:
 +^#x:: WinActivateBottom, ahk_class RAIL_WINDOW
 +^#z:: WinActivate, ahk_class ZPContentViewWndClass  ;; Zoom view window
