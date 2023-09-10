@@ -18,8 +18,6 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPC
 ;; load libraries
 ;; --------------
 
-#Include altchars.ahk
-
 ;; customize variables
 ;; -------------------
 
