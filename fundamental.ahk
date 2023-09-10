@@ -208,7 +208,8 @@ DllCall("SetWinEventHook"
 ;; Ignored Frames
 ;; --------------
 
-ignored_frames = ConsoleWindowClass,cygwin/x X rl-xterm-XTerm-0,mintty,MEADOW,Vim,Emacs,XEmacs,SunAwtFrame,Xming X,VMPlayerFrame,VirtualConsoleClass
+;; Maybe we don't need to inhibit these frames any more?
+;ignored_frames = ConsoleWindowClass,cygwin/x X rl-xterm-XTerm-0,mintty,MEADOW,Vim,Emacs,XEmacs,SunAwtFrame,Xming X,VMPlayerFrame,VirtualConsoleClass
 
 ;; decide if ewow should be quiet
 ignored_frame()
