@@ -55,35 +55,12 @@ return
 
 #If !dummy && !ignored_frame() && !cx                ;; Regular
 
-^b:: backward_char()
-+^b:: backward_word()
-+!^b:: send("^b")                 ;; (Also see +^X^b below, for Notion.)
-^f:: forward_char()
-+^f:: forward_word()
-+!^f:: send("^f")
-+^s:: send("^f")                  ;; For Notion windows, where !meta + ^ctl doesn't work
-
-^d:: delete_char()
-+^d:: send("^d")
-^k:: kill_line()
-+^k:: send("^k")
-+!^k:: send("+^k")
-
-^e:: move_end_of_line()
-+^e:: send("^e")
-^a:: move_beginning_of_line()
-+^a:: send("^a")
-+!^a:: send("+^a")
-^n:: next_line()
-^+n:: send("^n")
-!^+n:: send("+^n")
-^p:: previous_line()
-^+p:: send("^p")
-^!+p:: send("+^p")
-
-^space:: set_mark_command()
-^g:: keyboard_quit()
-+^g:: send("^g")
+;; *** Probably want Shift-^X <space>:
+;; *** But ewow mark command for regions doesn't work with other navigation. )-:
+;;^space:: set_mark_command()
+;;^g:: keyboard_quit()
++!^g:: keyboard_quit()
+;;+^g:: send("^g")
 
 ;; I don't use these much, there are good alternatives, and ^!v is valuable as is (paste verbatim.)
 ;;^!v:: scroll_up()
@@ -95,23 +72,17 @@ return
 
 #If !dummy && !ignored_frame() && cx                 ;; Ctrl-x
 
-^g:: reset_cx()               ; Cancel ctrl-x
++^g:: reset_cx()               ; Cancel ctrl-x
 
-':: set_accent_modifier("'")       ; single quote = acute
-`:: set_accent_modifier("`")       ; backquote = grave
-+`;:: set_accent_modifier(":")       ; pipe = umlaut (would prefer ":")
-^:: set_accent_modifier("^")       ; hat = circumflex
-~:: set_accent_modifier("~")       ; tilde
-,:: set_accent_modifier(",")       ; comma = cedilla
+;; ;; FRACTION SLASH makes all fractions but the fractions are expanded in many contexts.
+/:: send_accented("{U+2044}")       ; FRACTION SLASH - use between numerator and denomintor
+
 -:: command_simple("{U+2013}", 1, 1)     ; en-dash
 +-:: command_simple("{U+2014}", 1, 1)    ; em-dash
 0:: command_simple("{U+00B0}", 1, 1)    ; degree
 c:: command_simple("{U+00A2}", 1, 1)    ; cents
 $:: command_simple("{U+20AC}", 1, 1)    ; Euro
 \:: command_simple("{U+2713}", 1, 1)    ; checkmark
-
-;; ;; FRACTION SLASH makes all fractions but the fractions are expanded in many contexts.
-/:: send_accented("{U+2044}")       ; FRACTION SLASH - use between numerator and denomintor
 
 1:: set_accent_modifier("1")       ; numerator = 1
 2:: set_accent_modifier("2")       ; numerator = 2
@@ -122,15 +93,22 @@ l:: goto_line()                 ; (prompt if no prefix)
 o:: next_window()               ; other-window
 +o:: previous_window()        ; previous-buffer
 q:: query_replace()          ; query-replace-regexp
-<:: beginning_of_buffer()
->:: end_of_buffer()
 
-^b::                         ; Another way to send ctrl-b, eg particularly in Notion:
-command_simple("^b", 0, 1)   ; "changes" is 0 for consistency with effect of eg ^i.
+;;^b::                         ; Another way to send ctrl-b, eg particularly in Notion:
+;;command_simple("^b", 0, 1)   ; "changes" is 0 for consistency with effect of eg ^i.
 
 ;;(:: kmacro_start_macro()
 ;;):: kmacro_end_macro()
 ;;e:: kmacro_end_or_call_macro()
 
 
-#If !dummy && !ignored_frame() && !cx
+;;===========================================================================
+;; OBSOLETE: Retaining for useful info:
+
+;; Using native windows accents instead of these accent modifiers. klm 2023-09-09
+; ':: set_accent_modifier("'")       ; single quote = acute
+; `:: set_accent_modifier("`")       ; backquote = grave
+; +`;:: set_accent_modifier(":")       ; pipe = umlaut (would prefer ":")
+; ^:: set_accent_modifier("^")       ; hat = circumflex
+; ~:: set_accent_modifier("~")       ; tilde
+; ,:: set_accent_modifier(",")       ; comma = cedilla
