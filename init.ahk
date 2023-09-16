@@ -23,7 +23,7 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPC
 
 #If !dummy                                           ;; Everywhere:
 
-RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
+;;RAlt::RWin  ;; Makes the right Alt key become the Right Windows key
 
 ;; See https://www.autohotkey.com/docs/misc/WinTitle.htm and WinActivate.htm
 
