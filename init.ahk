@@ -27,19 +27,19 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPC
 
 ;; See https://www.autohotkey.com/docs/misc/WinTitle.htm and WinActivate.htm
 
++^#f:: WinActivateBottom, ahk_class CabinetWClass    ;; Windows Explorer
++^#x:: WinActivateBottom, ahk_class RAIL_WINDOW      ;; Among X/Wayland clients
++^#z:: WinActivate, ahk_class ZPContentViewWndClass  ;; Zoom view window
+
+
 ;;+^#c:: WinActivateBottom, ahk_exe chrome.exe
 ;;+^#e:: WinActivateBottom, ahk_exe msedge.exe
-+^#i:: WinActivate, iTunes
+;;+^#i:: WinActivate, iTunes
   ;; Explorer (.. Explorer.exe goes to task bar)
-+^#f:: WinActivateBottom, ahk_class CabinetWClass
-+^#n:: WinActivateBottom, ahk_exe notion.exe
 ;;+^#p:: WinActivateBottom, ahk_exe notepad++.exe
-+^#s:: WinActivate, Skype
+;;+^#s:: WinActivate, Skype
 ;;+^#t:: WinActivateBottom, ahk_exe WindowsTerminal.exe
 ;;+^#u:: WinActivateBottom, ahk_class PuTTY
-  ;; Alternate between all X clients:
-+^#x:: WinActivateBottom, ahk_class RAIL_WINDOW
-;;+^#z:: WinActivate, ahk_class ZPContentViewWndClass  ;; Zoom view window
 
 ^+#r::                          ;; Reload:
 MsgBox, 0, Reloading..., Reloading., .5
