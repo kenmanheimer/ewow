@@ -74,9 +74,7 @@ return
 
 +^g:: reset_cx()               ; Cancel ctrl-x
 
-;; ;; FRACTION SLASH makes all fractions but the fractions are expanded in many contexts.
-/:: send_accented("{U+2044}")       ; FRACTION SLASH - use between numerator and denomintor
-
+;; (I tried migrating a few to Keyboard Manager but they didn't work. 2024-03-15)
 -:: command_simple("{U+2013}", 1, 1)     ; en-dash
 +-:: command_simple("{U+2014}", 1, 1)    ; em-dash
 0:: command_simple("{U+00B0}", 1, 1)    ; degree
