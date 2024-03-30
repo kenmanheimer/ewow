@@ -105,6 +105,7 @@ q:: query_replace()          ; query-replace-regexp
 ;; OBSOLETE: Retaining for useful info:
 
 ;; Using native windows accents instead of these accent modifiers. klm 2023-09-09
+;; Eg, Ctrl-` + e => è
 ; ':: set_accent_modifier("'")       ; single quote = acute
 ; `:: set_accent_modifier("`")       ; backquote = grave
 ; +`;:: set_accent_modifier(":")       ; pipe = umlaut (would prefer ":")
