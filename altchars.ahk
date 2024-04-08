@@ -28,14 +28,14 @@
     5::send_accented("{U+2155}") ; 1/5
 }
 #If !dummy && !ignored_frame() && accent = "2"
-;; numerator = 1
+;; numerator = 2
 {
     3::send_accented("{U+2154}") ; 2/3
     5::send_accented("{U+2156}") ; 2/5
 }
 
 #If !dummy && !ignored_frame() && accent = "3"
-;; numerator = 1
+;; numerator = 3
 {
     4::send_accented("{U+00BE}") ; 3/4
     5::send_accented("{U+2157}") ; 3/5
