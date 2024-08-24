@@ -32,6 +32,17 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPC
 +^#f:: WinActivateBottom, ahk_class CabinetWClass    ;; Windows Explorer
 +^#x:: WinActivateBottom, ahk_class RAIL_WINDOW      ;; Among X/Wayland clients
 +^#z:: WinActivate, ahk_class ZPContentViewWndClass  ;; Zoom view window
+ 
+;; Insert time stamps:
+;; (https://www.autohotkey.com/board/topic/145273-insert-datetime-stamp-please/?p=724026)
++^#.::                          ;; Sat 2024-08-24 03:04 PM
+FormatTime, time, A_now, ddd yyy-MM-dd hh:mm tt
+send %time%
+return
++^#,::                          ;; 2024-08-24 Sat
+FormatTime, time, A_now, yyy-MM-dd ddd
+send %time%
+return
 
 
 ;;+^#c:: WinActivateBottom, ahk_exe chrome.exe
