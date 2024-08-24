@@ -27,6 +27,8 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPC
 
 ;; See https://www.autohotkey.com/docs/misc/WinTitle.htm and WinActivate.htm
 
+;; Explorer (`... ahk_exe Explorer.exe` goes to task bar, maybe also PowerToys Keyboard manager jump to explorer.exe.)
++^#a:: WinActivateBottom, ahk_exe auth.exe
 +^#f:: WinActivateBottom, ahk_class CabinetWClass    ;; Windows Explorer
 +^#x:: WinActivateBottom, ahk_class RAIL_WINDOW      ;; Among X/Wayland clients
 +^#z:: WinActivate, ahk_class ZPContentViewWndClass  ;; Zoom view window
@@ -35,7 +37,6 @@ ignored_frames = %ignored_frames%,vcxsrv/x X rl,ConsoleWindowClass,ahk_class ZPC
 ;;+^#c:: WinActivateBottom, ahk_exe chrome.exe
 ;;+^#e:: WinActivateBottom, ahk_exe msedge.exe
 ;;+^#i:: WinActivate, iTunes
-  ;; Explorer (.. Explorer.exe goes to task bar)
 ;;+^#p:: WinActivateBottom, ahk_exe notepad++.exe
 ;;+^#s:: WinActivate, Skype
 ;;+^#t:: WinActivateBottom, ahk_exe WindowsTerminal.exe
