@@ -89,6 +89,8 @@ return
 ;; (I tried migrating a few to Keyboard Manager but they didn't work. 2024-03-15)
 -:: command_simple("{U+2013}", 1, 1)     ; en-dash
 +-:: command_simple("{U+2014}", 1, 1)    ; em-dash
+>:: command_simple("{U+2287}", 1, 1)    ; inclusive superset ⊇
+<:: command_simple("{U+2286}", 1, 1)    ; inclusive subset ⊆
 0:: command_simple("{U+00B0}", 1, 1)    ; degree
 c:: command_simple("{U+00A2}", 1, 1)    ; cents
 e:: command_simple("{U+0190}", 1, 1)    ; Latin epsilon: Ɛ (bigger than lower case epsilon)
